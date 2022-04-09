@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CommandSystem;
 using Exiled.Permissions.Extensions;
 using Exiled.API.Features;
@@ -22,20 +22,20 @@ namespace Vips.Commands_Vips
                 return false;
             }
             Player p = Player.Get((CommandSender)sender);
-            if (p.Role.Type == RoleType.Tutorial)
+            if (p.Role != RoleType.Tutorial)
             {
-                p.IsInvisible = true;
+                response = "you aren't a tutorial";
+                return false;
+            }
+            if (p.IsInvisible)
+            {
+                p.IsInvisible = false;
                 response = "Done";
                 return true;
             }
-            if (p.Role.Type != RoleType.Tutorial)
-            {
-                response = "you are not a tutorial";
-                return false;
-            }
-            p.IsInvisible = false;
+            p.IsInvisible = true;
             response = "Done";
-            return false;
+            return true;
         }
     }
 }
