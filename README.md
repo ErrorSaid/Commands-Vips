@@ -6,7 +6,7 @@ A plugin for donators
 - is_enabled: true
 
 ## Commands Name
-Invisible: Name: Invisible Aliases: invs
-Chat: Name: chat Aliases: ch
-Tutorial: Name: Tutorial Aliases: tuto
-Noclip: Name: Noclip Aliases: nc
+- Invisible: Name: Invisible Aliases: invs
+- Chat: Name: chat Aliases: ch
+- Tutorial: Name: Tutorial Aliases: tuto
+- Noclip: Name: Noclip Aliases: nc
